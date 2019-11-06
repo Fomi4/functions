@@ -11,7 +11,11 @@
 // YZ
 
 function wraps(string, width) {
-  // code here
+  let chunks = [];
+  for (let i = 0, charsLength = string.length; i < charsLength; i += width) {
+      chunks.push(string.substring(i, i + width));
+  }
+  return chunks.join('\n').toString();
 }
 
 // // for self-check
